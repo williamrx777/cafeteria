@@ -1,0 +1,14 @@
+<div class="product-detail">
+  <h2>Pagamento</h2>
+  <div *ngIf="product">
+    <div class="product-info">
+      <img [src]="product.imagem" alt="{{product.nome}}">
+      <h3>{{product.nome}}</h3>
+      <p>Preço: R$ {{product.preco}}</p>
+      <button>Confirmar pagamento</button>
+    </div>
+  </div>
+  <div *ngIf="!product">
+    <p>Produto não encontrado.</p>
+  </div>
+</div>
