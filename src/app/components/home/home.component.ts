@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit{
 
   }
   ngOnInit(): void {
-    this.http.get('http://localhost:8080/produtos').subscribe((data:any) => {
+    this.http.get('https://cafeteria-nsmb.onrender.com/produtos').subscribe((data:any) => {
       this.cafeteria = data;
     });
   }

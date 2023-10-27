@@ -19,7 +19,7 @@ export class BuyComponent implements OnInit{
       this.productId = params.get('id');
     });
 
-    this.http.get(`http://localhost:8080/produtos/${this.productId}`).subscribe((data:any) => {
+    this.http.get(`https://cafeteria-nsmb.onrender.com/produtos/${this.productId}`).subscribe((data:any) => {
       this.product = data;
     },
     (error) => {
@@ -43,7 +43,7 @@ export class BuyComponent implements OnInit{
       };
 
       // Realize a solicitação HTTP POST para a URL 'http://localhost:8080/compras-confirmadas'
-      this.http.post('http://localhost:8080/compras-confirmas', dadosParaEnvio).subscribe(
+      this.http.post('https://cafeteria-nsmb.onrender.com/compras-confirmas', dadosParaEnvio).subscribe(
         (response) => {
           // Ação a ser realizada em caso de sucesso
           this.mensagem = 'Pagamento feito com sucesso', response;
