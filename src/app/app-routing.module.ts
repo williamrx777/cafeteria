@@ -6,6 +6,7 @@ import { BuyComponent } from './components/buy/buy.component';
 
 
 
+
 const routes: Routes = [
   {
     path:'',
@@ -19,6 +20,7 @@ const routes: Routes = [
     path: 'buy/:id',
     component:BuyComponent
   }
+
 ];
 
 @NgModule({

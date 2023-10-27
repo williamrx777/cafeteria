@@ -1,16 +1,4 @@
-<header>
-  <div class="container-header">
-    <img class="logo" src="https://img.freepik.com/vetores-premium/logotipo-vintage-para-comida-e-bebida-do-restaurante_116238-69.jpg" alt="">
-    <h1 class="frase">Cafeteria</h1>
-    <nav class="nav" >
-        <a class="frase" [routerLink]="['']">Home</a>
-        <a class="frase" [routerLink]="['contact']">Contato</a>
-    </nav>
-  </div>
-</header>
-
 <main>
-
     <div class="container-main">
       <ul class="item">
         <div class="produto" *ngFor="let produto of cafeteria ">
@@ -21,21 +9,4 @@
         </div>
       </ul>
     </div>
-
   </main>
-
-<footer >
-  <div class="container-footer">
-
-    <h3 >Social</h3>
-    <a href="#">
-      <img class="img-footer" src="https://cdn-icons-png.flaticon.com/256/59/59439.png" alt="facebook">
-    </a>
-    <a href="#">
-      <img class="img-footer" src="https://cdn-icons-png.flaticon.com/512/87/87390.png" alt="instagram">
-    </a>
-    <a href="#">
-      <img class="img-footer" src="https://cdn.icon-icons.com/icons2/2428/PNG/512/whatsapp_black_logo_icon_147050.png" alt="whatsapp">
-    </a>
-  </div>
-</footer>

@@ -1,20 +1,3 @@
-.container-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color: black;
-}
-.logo {
-  width: 100px;
-  border-radius: 150px;
-}
-
-.frase {
-color: white;
-text-decoration: none;
-margin: 15px;
-}
-
 .container-main {
   background-color: #fff6f6;
 }
@@ -44,15 +27,8 @@ margin: 15px;
   font-weight: 400;
 }
 
-.container-footer {
-  background-color: #fdffeb;
-  text-align: center;
-}
 
-.img-footer {
-  width: 25px;
-  margin: 5px;
-}
+
 
 .button {
   background-color: rgba(17, 0, 255, 0.439);

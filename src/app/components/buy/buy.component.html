@@ -1,11 +1,12 @@
-<div class="product-detail">
+<div class="payment-container">
   <h2>Pagamento</h2>
   <div *ngIf="product">
     <div class="product-info">
-      <img [src]="product.imagem" alt="{{product.nome}}">
-      <h3>{{product.nome}}</h3>
-      <p>Preço: R$ {{product.preco}}</p>
-      <button>Confirmar pagamento</button>
+      <img class="product-image" [src]="product.imagem" alt="{{product.nome}}">
+      <h2 class="product-name">{{product.nome}}</h2>
+      <p class="product-price">Preço: R$ {{product.preco}}</p>
+      <button class="payment-button" type="submit" (click)="confirmarPagamento()">Confirmar pagamento</button>
+      <h3>{{mensagem}}</h3>
     </div>
   </div>
   <div *ngIf="!product">

@@ -11,6 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class BuyComponent implements OnInit{
   productId:any;
   product: any ;
+  mensagem:String = ''
   constructor(private route: ActivatedRoute, private http:HttpClient) {}
 
   ngOnInit(): void {
@@ -25,6 +26,35 @@ export class BuyComponent implements OnInit{
       console.log('Erro ao buscar produto', error);
     });
 
+  }
+
+
+
+  confirmarPagamento() {
+    if (this.product) {
+      // Construa o objeto de dados que você deseja enviar na solicitação POST (pode variar de acordo com os requisitos do seu servidor)
+      const dadosParaEnvio = {
+        produtoId: this.product.id,
+        nome: this.product.nome,
+        preco: this.product.preco,
+        imagem: this.product.imagem,
+        data: this.product.data, // Substitua pelo campo correto do produto
+        // Outros dados relacionados à compra, se necessário
+      };
+
+      // Realize a solicitação HTTP POST para a URL 'http://localhost:8080/compras-confirmadas'
+      this.http.post('http://localhost:8080/compras-confirmas', dadosParaEnvio).subscribe(
+        (response) => {
+          // Ação a ser realizada em caso de sucesso
+          this.mensagem = 'Pagamento feito com sucesso', response;
+          // Você pode adicionar aqui o redirecionamento para outra página ou qualquer outra ação necessária após o pagamento ser confirmado.
+        },
+        (error) => {
+          // Ação a ser realizada em caso de erro na solicitação
+          this.mensagem = 'Erro ao confirmar pagamento', error;
+        }
+      );
+    }
   }
 
 
