@@ -43,5 +43,24 @@
   color: white;
 }
 
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.mat-spinner {
+  width: 50px; /* Largura do spinner */
+  height: 50px; /* Altura do spinner */
+  border-width: 4px; /* Espessura da borda */
+  border-color: #007ACC transparent transparent transparent; /* Cor da borda */
+  animation: spin 2s linear infinite; /* Animação de rotação */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 
 
