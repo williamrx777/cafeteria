@@ -9,7 +9,7 @@
       <h3>{{mensagem}}</h3>
     </div>
   </div>
-  <div *ngIf="!product">
-    <p>Produto não encontrado.</p>
+  <div class="error" *ngIf="!product">
+    <mat-spinner></mat-spinner>
   </div>
 </div>

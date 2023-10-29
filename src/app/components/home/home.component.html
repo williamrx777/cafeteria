@@ -1,12 +1,18 @@
 <main>
-    <div class="container-main">
+  <div class="container-main">
+    <div *ngIf="loading">
       <ul class="item">
         <div class="produto" *ngFor="let produto of cafeteria ">
-          <img class="img-produto" src="{{produto.imagem}}" >
-          <h3 class="nome-produto">{{produto.nome}}</h3>
-          <h3 class="preco-produto">R${{produto.preco}}</h3>
-          <button class="button"><a [routerLink]="'buy/' + produto.id">compre aqui</a></button>
-        </div>
-      </ul>
+        <img class="img-produto" src="{{produto.imagem}}" >
+              <h3 class="nome-produto">{{produto.nome}}</h3>
+              <h3 class="preco-produto">R${{produto.preco}}</h3>
+              <button class="button"><a [routerLink]="'buy/' + produto.id">compre aqui</a></button>
+            </div>
+          </ul>
+    </div>
+    <div class="error" *ngIf="!loading">
+        <mat-spinner></mat-spinner>
+
+    </div>
     </div>
   </main>
