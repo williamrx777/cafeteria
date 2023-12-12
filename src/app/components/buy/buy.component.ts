@@ -19,7 +19,7 @@ export class BuyComponent implements OnInit{
       this.productId = params.get('id');
     });
 
-    this.http.get(`https://cafeteria-nsmb.onrender.com/produtos/${this.productId}`).subscribe((data:any) => {
+    this.http.get(`https://cafeteria.williamrx777.repl.co/cafeteria/cafeteria-detalhe/${this.productId}/`).subscribe((data:any) => {
       this.product = data;
     },
     (error) => {
@@ -35,15 +35,15 @@ export class BuyComponent implements OnInit{
       // Construa o objeto de dados que você deseja enviar na solicitação POST (pode variar de acordo com os requisitos do seu servidor)
       const dadosParaEnvio = {
         produtoId: this.product.id,
-        nome: this.product.nome,
-        preco: this.product.preco,
-        imagem: this.product.imagem,
+        name: this.product.name,
+        price: this.product.price,
+        image: this.product.image,
         data: this.product.data, // Substitua pelo campo correto do produto
         // Outros dados relacionados à compra, se necessário
       };
 
       // Realize a solicitação HTTP POST para a URL 'http://localhost:8080/compras-confirmadas'
-      this.http.post('https://cafeteria-nsmb.onrender.com/compras-confirmas', dadosParaEnvio).subscribe(
+      this.http.post('https://cafeteria.williamrx777.repl.co/confirmarCompra/confirmarCompra-lista/', dadosParaEnvio).subscribe(
         (response) => {
           // Ação a ser realizada em caso de sucesso
           this.mensagem = 'Pagamento feito com sucesso', response;
