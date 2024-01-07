@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit{
 
   }
   ngOnInit(): void {
-    this.http.get('https://cafeteria.williamrx777.repl.co/cafeteria/cafeteria-lista/').subscribe((data:any) => {
+    this.http.get('https://65a5b08c-fc5e-4d0d-968b-df555e27f114-00-5cf6k32har2s.riker.replit.dev/api/cafeteria').subscribe((data:any) => {
       this.cafeteria = data;
       this.loading = true; // Marca a carga como concluída
     });

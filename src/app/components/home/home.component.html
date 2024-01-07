@@ -3,9 +3,9 @@
     <div *ngIf="loading">
       <ul class="item">
         <div class="produto" *ngFor="let produto of cafeteria ">
-        <img class="img-produto" src="{{produto.image}}" >
-        <h3 class="nome-produto">{{produto.name}}</h3>
-        <h3 class="preco-produto">R${{produto.price}}</h3>
+        <img class="img-produto" src="{{produto.imagem}}" >
+        <h3 class="nome-produto">{{produto.nome}}</h3>
+        <h3 class="preco-produto">R${{produto.preco}}</h3>
         <button class="button"><a [routerLink]="'buy/' + produto.id">compre aqui</a></button>
         </div>
         </ul>
